@@ -50,6 +50,6 @@ public class UserControllerTest {
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .body(BodyInserters.fromFormData(formData))
                 .exchange()
-                .expectStatus().isOk();
+                .expectStatus().is4xxClientError();
     }
 }
